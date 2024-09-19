@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import url('https://fonts.cdnfonts.com/css/cat-hohenzollern');
+
+                
+.article { 
+    position: relative;
+    float: left;
+    text-align: left;
+    padding-left: 40px;
+    padding-top: 40px;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+}
+.articles {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.article::selection {
+    background-color: #72d1d1;
+    color: #1a1919;
+}
+.article p {
+    font-size: 30px;
+}
+.article h2 {
+    font-size: 40px;
+    font-weight: bold;
+    overflow: hidden;
+}
+.logo .tne {
+    padding: 10px;
+    font-family: 'CAT Hohenzollern', sans-serif;
+    display: inline-block;
+    animation-name: scroll;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    user-select: none;
+}
+.logo::-webkit-scrollbar {
+    display: none;
+}
+.logo {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-top: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+@keyframes scroll {
+    0%   {
+       transform: translateX(0);
+    }
+    100%  {
+        transform: translateX(calc(100% - 5px));
+    }
+}  
+
+.logo:hover .tne {
+    animation-play-state: paused;
+}
+
+.myblog {
+    display: flex;
+    overflow-y: hidden;
+    float: right;
+    padding: 25px;
+    padding-right: 40px;
+}
+.myblog::-webkit-scrollbar h2{
+    display: none;
+}
+.myblog h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    overflow-y: hidden;
+}
+.myblog a {
+    text-decoration: none;
+}
